@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'CairoRegular';
+    src: url('../src/assets/fonts/cairo/Cairo-Regular.ttf');
+    src: url('../src/assets/fonts/cairo/Cairo-Regular.woff') format('woff'), url('../src/assets/fonts/cairo/Cairo-Regular.ttf') format('truetype'), url('../src/assets/fonts/cairo/Cairo-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NassimRegular';
+    src: url('../src/assets/fonts/nassim/NassimArabic-Rg.otf');
+    src: url('../src/assets/fonts/nassim/NassimArabic-Me.ttf') format('woff'), url('../src/assets/fonts/nassim/NassimArabic-Rg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CairoRegular'!important;
+}

@@ -1,0 +1,24 @@
+<nav>
+  <div [class.header-shift]="menuOpen" class="header flex justify-between items-center p-[10px]" style="background-color: #fff;border-bottom: 1px solid #ddd;">
+    <img class="h-[40px]" src="../../../assets/images/png/logo.png" alt="Logo">
+    <button (click)="toggleMenu()">☰</button>
+  </div>
+  <div class="menu" [class.open]="menuOpen">
+    <div class="sm:block bg-[#F5F5F5] p-10 flex justify-center">
+      <img class="h-[40px]" src="../../../assets/images/png/logo.png" alt="Logo">
+    </div>
+    <ul>
+      <li class="text-right font-bold" *ngFor="let item of menuItems">
+        <a [href]="'/' + item.section">{{ item['label'] }}</a>
+      </li>
+    </ul>
+    <div class="social-links bg-[#F5F5F5]">
+      <a *ngIf="socialLinks.facebook" [href]="socialLinks.facebook"><img src="../../../assets/images/svg/facebook-svgrepo-com.svg" alt="Facebook"></a>
+      <a *ngIf="socialLinks.twitter" [href]="socialLinks.twitter"><img src="../../../assets/images/svg/twitter-color-svgrepo-com.svg" alt="Twitter"></a>
+      <a *ngIf="socialLinks.instagram" [href]="socialLinks.instagram"><img src="../../../assets/images/svg/instagram-svgrepo-com.svg" alt="Instagram"></a>
+      <!-- <a *ngIf="socialLinks.baaz" [href]="socialLinks.baaz"><img src="path-to-baaz-icon" alt="Baaz"></a> -->
+      <a *ngIf="socialLinks.youtube" [href]="socialLinks.youtube"><img src="../../../assets/images/svg/youtube-svgrepo-com.svg" alt="YouTube"></a>
+      <!-- <a *ngIf="socialLinks.rss" [href]="socialLinks.rss"><img src="path-to-rss-icon" alt="RSS"></a> -->
+    </div>
+  </div>
+</nav>
