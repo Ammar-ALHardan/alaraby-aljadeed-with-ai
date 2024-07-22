@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HompepageService {
-  private apiUrl = 'https://corsproxy.io/?https://www.alaraby.co.uk/mobile-app-v2/listing/news/10/1';
+  private apiUrl = 'https://corsproxy.io/?https://www.alaraby.co.uk/mobile-app-v2/listing/news/20/1';
 
   constructor(private http: HttpClient) { }
 
