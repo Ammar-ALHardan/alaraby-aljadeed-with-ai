@@ -1,22 +1,27 @@
 <section class="my-24">
     <div class="max-w-desktop px-4 lg:px-11 mx-auto flex flex-col lg:flex-row flex-wrap gap-6">
-      <div *ngFor="let item of displayedItems" class="flex flex-col gap-[20px] w-full lg:w-[calc(33%-24px)] bg-[#fff]">
+      <div *ngFor="let item of items" class="flex flex-col gap-[20px] w-full lg:w-[calc(33%-24px)] bg-[#fff]">
         <img class="media min-h-[237px]" [src]="item.media ? item.media : item.image" alt="">
-        <p class="title text-right font-bold text-xl min-h-[56px] px-3">{{item.title}}</p>
+        <p class="title text-right font-bold text-xl min-h-[56px] px-3">{{ item.title }}</p>
         <div class="flex justify-between flex-row px-3">
           <div class="flex flex-row gap-5">
             <img src="../../assets/images/svg/date-range-svgrepo-com.svg" alt="date" width="20">
             <p class="publish_date text-[#C3C3C3] font-bold">{{ item.publish_date ? item.publish_date : item.pub_date }}</p>
           </div>
           <div class="flex flex-row gap-5">
-            <img src="../../assets/images/svg/save-svgrepo-com.svg" alt="date" width="30">
-            <img src="../../assets/images/svg/share-svgrepo-com.svg" alt="date" width="20"> 
+            <img src="../../assets/images/svg/save-svgrepo-com.svg" alt="save" width="30">
+            <img src="../../assets/images/svg/share-svgrepo-com.svg" alt="share" width="20">
           </div>
-         
         </div>
         <hr>
       </div>
     </div>
-    <button class="bg-[#fff] text-black flex justify-center mx-auto my-5 border-[1px] border-solid border-black rounded-md p-2" *ngIf="items.length > displayedItems.length" (click)="loadMore()">تحميل المزيد</button>
+    <button 
+      class="bg-[#fff] text-black flex justify-center mx-auto my-5 border-[1px] border-solid border-black rounded-md p-2" 
+      *ngIf="items.length >= itemsToShow" 
+      (click)="loadMore()"
+    >
+      تحميل المزيد
+    </button>
   </section>
   
