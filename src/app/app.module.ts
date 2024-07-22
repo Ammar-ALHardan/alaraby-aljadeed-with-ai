@@ -4,6 +4,8 @@ import { MenuComponent } from './header/menu/menu.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { routes } from './app.routes';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { RouterOutlet } from '@angular/router';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterOutlet
+    RouterOutlet,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
