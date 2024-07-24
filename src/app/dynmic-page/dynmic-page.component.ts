@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NewDynmicService } from '../new-dynmic.service';
+import { NewDynmicService } from '../services/new-dynmic.service';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HompepageService } from '../hompepage.service';
+import { HompepageService } from '../services/hompepage.service';
 import { DatePipe, NgFor, NgIf } from '@angular/common';
 
 @Component({
